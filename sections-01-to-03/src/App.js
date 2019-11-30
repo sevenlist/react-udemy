@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Person from './Person/Person';
 import shortid from 'shortid';
 
 const App = () => {
     const [persons, setPersons] = useState([
-        {id: shortid.generate(), name: 'Alice', age: 21},
-        {id: shortid.generate(), name: 'Bob', age: 22}
+        { id: shortid.generate(), name: 'Alice', age: 21 },
+        { id: shortid.generate(), name: 'Bob', age: 22 }
     ]);
 
     const [newName, setNewName] = useState({
