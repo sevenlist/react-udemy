@@ -5,8 +5,15 @@ import UserInput from './UserInput';
 
 describe('<UserInput />', () => {
 
+    let wrapper;
+
+    beforeEach(() => {
+        wrapper = shallow(<UserInput />);
+    });
+
     it('renders one <Input /> component', () => {
-        const wrapper = shallow(<UserInput />);
+        wrapper.setProps({ username: 'Ted'})
         expect(wrapper.find(Input)).toHaveLength(1);
+        expect(wrapper.contains(<Input value='Ted' />)).toEqual(true);
     });
 });
